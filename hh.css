@@ -1,82 +1,214 @@
-body {
-	margin: 0;
-	padding: 0;
-	background-color: #000;
+* {
+    box-sizing: border-box;
 }
+
+html {
+    background-color: #ffffff;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    font-family: Arial, sans-serif;
+}
+
+
+/* Heading */
+
+h1 {
+    text-align: center;
+    color: #000000 !important;
+}
+
+
+/* Paragraph */
+
+p {
+    line-height: 2.5;
+    font-size: 18px;
+    text-align: center;
+
+    color: #000000 !important;
+    background-color: #ffffff !important;
+
+    padding: 25px;
+    margin: 30px;
+}
+
+
+/* Shayari Block */
 
 .block {
-	position: relative;
-	margin: 300px auto 0;
-	width: 500px;
-	height: 250px;
-	background: linear-gradient(0deg, #000, #272727);
+    position: relative;
+
+    margin: 50px auto;
+
+    width: 500px;
+    max-width: 90%;
+
+    min-height: 250px;
+    height: auto;
+
+    padding: 20px;
+
+    /* BLACK HATA DIYA */
+    background: #ffffff !important;
+
+    color: #000000 !important;
+
+    border-radius: 8px;
+
+    z-index: 1;
 }
 
-.block:before, .block:after {
-	content: '';
-	position: absolute;
-	left: -2px;
-	top: -2px;
-	background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00,#ffff00, #ff0000, #fb0094, 
-		#0000ff, #00ff00,#ffff00, #ff0000);
-	background-size: 400%;
-	width: calc(100% + 4px);
-	height: calc(100% + 4px);
-	z-index: -1;
-	animation: steam 20s linear infinite;
+
+/* Colorful Border */
+
+.block::before,
+.block::after {
+    content: '';
+
+    position: absolute;
+
+    left: -2px;
+    top: -2px;
+
+    background: linear-gradient(
+        45deg,
+        #fb0094,
+        #0000ff,
+        #00ff00,
+        #ffff00,
+        #ff0000,
+        #fb0094,
+        #0000ff,
+        #00ff00,
+        #ffff00,
+        #ff0000
+    );
+
+    background-size: 400%;
+
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+
+    z-index: -1;
+
+    animation: steam 20s linear infinite;
+
+    border-radius: 8px;
 }
+
 
 @keyframes steam {
-	0% {
-		background-position: 0 0;
-	}
-	50% {
-		background-position: 400% 0;
-	}
-	100% {
-		background-position: 0 0;
-	}
-}
 
-.block:after {
-	filter: blur(50px);
-}
-h1{
- text-align: center;
-}
-br{
-  margine: 50px;
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
 
 }
-p{
-  line-height: 2.5;
-  font-size: 18px;
-  text-align: center;
-  color: black;
-  padding: 25px;
-  margin: 30px;
-  margin-text: 5px;
+
+
+/* Glow */
+
+.block::after {
+    filter: blur(30px);
+}
+
+
+/* Images */
+
+.responsive {
+    width: 80%;
+    max-width: 500px;
+
+    height: auto;
+
+    margin: 20px auto;
+
+    display: block;
+
+    box-shadow: 1px 5px 18px red;
+
+    border-radius: 8px;
+}
+
+
+/* Footer */
+
+footer {
+    text-align: center;
+
+    padding: 15px;
+
+    background-color: #61aaed;
+
+    color: white;
+}
+
+
+footer p {
+    background-color: transparent !important;
+    color: white !important;
+}
+
+
+/* DD */
+
+.dd {
+    text-align: center;
+
+    font-size: 18px;
+
+    padding: 5px;
+
+    color: #0000ff;
+
+    background-color: #ffffff;
+}
+
+
+/* Mobile */
+
+@media screen and (max-width: 600px) {
+
+    body {
+        background-color: #ffffff !important;
+        color: #000000 !important;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    p {
+        font-size: 17px;
+        padding: 15px;
+        margin: 15px;
+        color: #000000 !important;
+        background-color: #ffffff !important;
+    }
+
+    .block {
+        width: 90%;
+        min-height: 150px;
+        margin: 30px auto;
+        background: #ffffff !important;
+        color: #000000 !important;
+    }
+
+    .responsive {
+        width: 90%;
+    }
 
 }
- 
-  .responsive {
-     width: 80%;
-     height: auto;
-     margin-bottom: 20px;
-     display: block;
-     margin-left: auto;
-    margin-right: auto;
-     box-shadow: 1px 5px 18px red;
-  }
-  footer {
-   text-align: center;
-   padding: 3px;
-   background-color: #61aaed;
-   color: white;
-  }
-  .dd{
-     text-align: center;
-     font-size: 18px;
-     padding: 5px;
-     color: blue;
-   }
