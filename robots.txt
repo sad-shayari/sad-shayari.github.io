@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://numberfont.github.io/sitemap.xml
+Sitemap: https://sad-shayari.github.io/sitemap.xml
